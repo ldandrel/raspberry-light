@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+body {
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  font-family: 'Lato', Arial, sans-serif;
+  background: #2196f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 18px;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+body .container {
+  background: transparent;
+  width: 200px;
+  height: 60px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  line-height: 60px;
+  text-align: center;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+body .container:hover {
+  cursor: pointer;
+}
+body .container .front {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 4px;
+  z-index: 2;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+body .container .back {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
